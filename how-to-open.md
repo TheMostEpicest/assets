@@ -24,12 +24,16 @@ This is how Blender stores its files. (A .blend1 file is just a backup Blender w
 This is how Source Filmmaker stores its files.
 ### .vmt/.vtf
 These are texture files used in the Source Engine, and are opened using VTFEdit. In order for them to show up properly in game, place them in the `tf/` or `usermod/` directory, following the exact file structure they have in this directory.
-### .mdl/.vtx/.vvd
-These are model and lighting files used in the Source Engine, and only .mdl files can be opened. To add these to a SFM scene, click `+` > `Add Animation Set for New Model`, then select the .mdl file. (.mdl files can also be viewed in the Half-Life Model Viewer (HLMV) which is located in the same directory as Hammer)
+### .mdl
+These are model files used in the Source Engine. To add these to a SFM scene, click `+` > `Add Animation Set for New Model`, then select the .mdl file. (.mdl files can also be viewed in the Half-Life Model Viewer (HLMV) which is located in the same directory as Hammer)
+### .vtx/.vvd
+These are vertex files used in the Source Engine, which tell the game how to render lights, reflections, bone weight, and textures on a model. As far as I know, they cannot be opened in a meaningful way.
 ### .qc/.smd
-These are script files used to compile 3d models from a modeling software like Blender into models that can be used in the Source Engine. Unless you're editing models and porting them to SFM, you won't need to touch these files.
+These are script files used as an intermediate step to compile 3d models from a modeling software like Blender into models that can be used in the Source Engine. Unless you're editing models and porting them to SFM, you won't need to touch these files.
 ### .vmf/.bsp
 These are map files used in the Source Engine. .vmf files are uncompiled maps, which can be opened and are compiled into .bsp files in Hammer. .bsp files are compiled maps, can be loaded in any Source game and can be decompiled into .vmf files with BSPSource.
+### .vpk
+These are Valve Pack files, which are essentially zipped files used by the Source Engine. They can be extracted using GCFScape
 # How do I convert file type X to file type Y?
 There are already great guides for pretty much any kind of file conversion you can do with the files in this repo, but here are a few:
 ### .xcf to .png/.jpg/.gif
